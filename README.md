@@ -1,101 +1,134 @@
-🚀 Discord Bot
+# 🚀 Discord News Bot
 
-📖 Description
+A Discord bot offering news aggregation, weather updates, user preference management, and subscription-based notifications.
 
-This Discord bot provides various functionalities, including fetching top news, weather updates, and managing user preferences. It also supports subscription-based notifications.
+## 📖 Features
 
-🎯 Features
+- **Top News:** Fetch top news articles based on user preferences and keywords.
+- **News Search:** Retrieve articles using keywords, domain, language, sorting, and page size.
+- **Weather Updates:** Get current weather details for a specific city and country.
+- **Preference Management:** Add or remove preferred news categories.
+- **Newsletter Subscriptions:** Subscribe or unsubscribe from notifications.
+- **Direct Messages:** Receive command responses directly in DMs.
 
-Fetch top news based on user preferences and keywords
+## 📦 Installation
 
-Retrieve articles based on keywords, domain, language, sorting, and page size
+### Prerequisites
 
-Get current weather details for a specific city and country
+- Python 3.x
+- Discord bot token
+- Required dependencies listed in `requirements.txt`
 
-Manage your preferences (add/remove)
+### Setup
 
-Subscribe or unsubscribe from our newsletter
+1. Clone the repository:
 
-Direct Message (DM) support for commands
+   ```bash
+   git clone https://github.com/Bacekalki/News-Bot.git
+   cd NewsBot
+   ```
 
-📦 Installation
+2. Install the dependencies:
 
-Prerequisites
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-Python 3.x installed
+3. Configure your environment variables by creating a `.env` file:
 
-Discord bot token
+   ```env
+   DISCORD_BOT_TOKEN=your_token_here
+   ```
 
-Required dependencies (install via requirements.txt)
+4. Run the bot:
 
-Steps
+   ```bash
+   python main.py
+   ```
 
-# Clone the repository
-git clone https://github.com/yourusername/your-bot.git
-cd your-bot
-
-# Install dependencies
-pip install -r requirements.txt
-
-# Run the bot
-python main.py
-
-🔥 Usage
+## 🔥 Usage
 
 The bot supports the following commands:
 
-Supported commands are:
-- get-top-news "preferences" "keywords"
-- get-everything "keywords" "domain" "language" "sortBy" "pageSize"
-- get-weather "city" "country"
-- add-preference "preference"
-- remove-preference "preference"
-- subscribe "email"
-- unsubscribe
-- help
+| Command | Description |
+|---|---|
+| `get-top-news "preferences" "keywords"` | Fetch top news based on preferences and keywords. |
+| `get-everything "keywords" "domain" "language" "sortBy" "pageSize"` | Retrieve articles using specified search parameters. |
+| `get-weather "city" "country"` | Get current weather for a specific location. |
+| `add-preference "preference"` | Add a news preference. |
+| `remove-preference "preference"` | Remove a news preference. |
+| `subscribe "email"` | Subscribe to the newsletter. |
+| `unsubscribe` | Unsubscribe from the newsletter. |
+| `help` | Display available commands. |
 
-Additional Notes:
-- Put a question mark as the first character to receive the output in DMs.
-- Valid sortBys: "relevancy", "popularity", "publishedAt".
-- Use 2-letter codes for languages.
-- Supported preferences are business, entertainment, health, science,
-sports, technology
+### Additional Notes
 
-🛠️ Configuration
+- Start a command with `?` to receive its output in DMs.
+- Valid `sortBy` values:
+  - `relevancy`
+  - `popularity`
+  - `publishedAt`
+- Use two-letter language codes.
+- Supported news preferences:
+  - `business`
+  - `entertainment`
+  - `health`
+  - `science`
+  - `sports`
+  - `technology`
 
-Create a .env file and add your bot token:
+## 🛠️ Configuration
 
+Create a `.env` file in the project root and add your Discord bot token:
+
+```env
 DISCORD_BOT_TOKEN=your_token_here
+```
 
-🏗️ Project Structure
+## 🏗️ Project Structure
 
+```text
 NewsBot/
-│-- main.py            # Main class
-│-- src/               # Main logic
-│-- README.md         # Documentation
-│-- requirements.txt  # Dependencies
+│
+├── main.py              # Main class
+├── src/                 # Main logic
+├── README.md            # Documentation
+└── requirements.txt     # Dependencies
+```
 
-🤝 Contributing
+## 🤝 Contributing
 
-Fork the repository
+Contributions are welcome!
 
-Create a new branch (git checkout -b feature-branch)
+1. Fork the repository.
+2. Create a new branch:
 
-Commit your changes (git commit -m "Added new feature")
+   ```bash
+   git checkout -b feature-branch
+   ```
 
-Push to the branch (git push origin feature-branch)
+3. Commit your changes:
 
-Open a Pull Request
+   ```bash
+   git commit -m "Added new feature"
+   ```
 
-🐛 Issues & Support
+4. Push to your branch:
 
-If you encounter any issues, please open an issue.
+   ```bash
+   git push origin feature-branch
+   ```
 
-📜 License
+5. Open a Pull Request.
+
+## 🐛 Issues & Support
+
+If you encounter any issues, please open an issue in the repository.
+
+## 📜 License
 
 This project is licensed under the MIT License.
 
-🌟 Acknowledgments
+## 🌟 Acknowledgments
 
 Special thanks to all contributors who helped improve this bot!
-
